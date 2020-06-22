@@ -1,4 +1,4 @@
-# string-tool-cli-app
+# string-tool-cli-app using php symfony console
 ## Create a new directory for our project and `cd` into it: 
 ```mkdir string-tool-cli-app && cd string-tool-cli-app``` - in cmd
 
