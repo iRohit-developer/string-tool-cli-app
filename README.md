@@ -1,19 +1,19 @@
 # string-tool-cli-app
-1) Create a new directory for our project and `cd` into it: 
-mkdir string-tool-cli-app && cd string-tool-cli-app - in cmd
+## Create a new directory for our project and `cd` into it: 
+```mkdir string-tool-cli-app && cd string-tool-cli-app``` - in cmd
 
-2)Require the Console Component into our project using Composer.
+## Require the Console Component into our project using Composer.
 you can download the composer from https://getcomposer.org/download
 There you will find Command-line installation
 To quickly install Composer in the current directory, run the following script in your terminal. To automate the installation, use the guide on installing Composer programmatically. 
 
 Open your bash or cmd in your project path
 -Then starting executing codes line by line
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+```php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
-
+```
 After composer installed successfully, execute below code
 composer require symfony/console
 3)Now create an entry point to our application. A PHP extension is not necessary as we are going to make this file executable and specify the environment in the file itself. 
