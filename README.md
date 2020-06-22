@@ -16,13 +16,16 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 After composer installed successfully, execute below code
+```php
 composer require symfony/console
+```
 3)Now create an entry point to our application. A PHP extension is not necessary as we are going to make this file executable and specify the environment in the file itself. 
-touch StringTool
-chmod +X StringTool
+```touch StringTool```
+```chmod +X StringTool```
 ...lets create a simple hello world before getting into the main scenario.
 vim StringTool - after execution this code we get editor there just enter i for insert mode and write the code
-Everyone get stuck at intrepreter error so here is the solution - #!/usr/bin/env php
+Everyone get stuck at intrepreter error so here is the solution - ``` #!/usr/bin/env php ```
+```
 #!/usr/bin/env php
 <?php
 
@@ -31,12 +34,14 @@ if (php_sapi_name() !== 'cli') {
 }
 
 echo "Hello World\n";
+```
 Now run the application with:
-./StringTool
+```./StringTool```
 We should see a Hello World as output.
 Lets Jump into the main scenario...........
 
 4)Remove code in StringTool, lets add this code
+```
 #!/usr/bin/env php
 <?php
 require __DIR__.'/vendor/autoload.php';
@@ -89,15 +94,16 @@ use Symfony\Component\Console\Output\OutputInterface;
       })
       ->getApplication()
       ->run();
-      
- That's it. 
- Run the ./StringTool in command line there we will find our StringTool info screen.
- After that ./StringTool command [input arguments]
-type - ./StringTool string "hello world"
+```      
+That's it. 
+Run the ./StringTool in command line there we will find our StringTool info screen.
+After that ./StringTool command [input arguments]
+type - ```./StringTool string "hello world"```
 Finally we will get output like...
+```
 HELLO WORLD
 hElLo WoRlD
 CSV created!
-
+```
 
    
